@@ -8,8 +8,8 @@
       1. Press and hold position T2 for more than 20 seconds.
       2. The LED will alternately flash red and green for 5 seconds after a successful reset.
 </MetaDataItem>
-    <MetaDataItem id="1000" name="Identifier" type="0303">0300/9496</MetaDataItem>
-    <MetaDataItem name="Name">Shutter</MetaDataItem>
+    <MetaDataItem id="1000" name="Identifier" type="0303">0300/9499</MetaDataItem>
+    <MetaDataItem name="Name">Single-Switch</MetaDataItem>
     <MetaDataItem name="InclusionDescription">1. Install the TechniSat Single-Switch.
       2. After checking the correct installation, re-enable electrical power at the main fuse or circuit breaker.
       3. Start the Z-Wave device add mode on your Z-Wave gateway, according to the gateway‘s manual.
@@ -32,6 +32,7 @@
 </MetaDataItem>
     <ChangeLog>
       <Entry author="Mathis Klooss - ozw@gunah.eu" date="13 Jun 2020" revision="1">Initial file based on z-wavealliance.org</Entry>
+      <Entry author="Frank Segers - fr.github@famsegers.nl" date="1 Nov 2020" revision="2">Fixed mismatched values</Entry>
     </ChangeLog>
   </MetaData>
   <!-- Configuration -->
@@ -90,7 +91,7 @@
   <CommandClass id="133">
     <Associations num_groups="2">
       <Group index="1" label="Lifeline" max_associations="1"/>
-      <Group index="2" label="Basic on/off" max_associations="16"/>
+      <Group index="2" label="Basic on/off" max_associations="10"/>
     </Associations>
   </CommandClass>
 </Product>
