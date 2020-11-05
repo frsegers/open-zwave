@@ -81,7 +81,7 @@
     <Compatibility>
       <MapRootToEndpoint>true</MapRootToEndpoint>
     </Compatibility>
-    <Instance index="1" label="i1" />
-    <Instance index="2" label="i2" />
+    <Instance index="1" label="L1" />
+    <Instance index="2" label="L2" />
   </CommandClass>
 </Product>
