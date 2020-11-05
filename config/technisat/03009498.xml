@@ -1,6 +1,6 @@
 <Product Revision="1" xmlns="https://github.com/OpenZWave/open-zwave">
   <MetaData>
-    <MetaDataItem name="OzwInfoPage">http://www.openzwave.com/device-database/0299:1A90:0002</MetaDataItem>
+    <MetaDataItem name="OzwInfoPage">http://www.openzwave.com/device-database/0299:1A91:0003</MetaDataItem>
     <MetaDataItem name="ProductPic">images/technisat/03009498.png</MetaDataItem>
     <MetaDataItem id="1000" name="ZWProductPage" type="0303">https://products.z-wavealliance.org/products/3779/</MetaDataItem>
     <MetaDataItem name="WakeupDescription">TechniSat Double-Switch is powered with mains voltage so it is always awake.</MetaDataItem>
@@ -30,7 +30,7 @@
        - Short circuit and overload protection monitoring
     </MetaDataItem>
     <ChangeLog>
-      <Entry author="Frank Segers - fr.github@famsegers.nl" date="01 Nov 2020" revision="1">Initial file based on z-wavealliance.org</Entry>
+      <Entry author="Frank Segers - fr.github@famsegers.nl" date="04 Nov 2020" revision="1">Initial file based on z-wavealliance.org and device manual</Entry>
     </ChangeLog>
   </MetaData>
   <!-- Configuration -->
@@ -65,12 +65,23 @@
       <Item label="Toogle Switch" value="1" />
     </Value>
   </CommandClass>
-  <!-- Association Groups -->
-  <CommandClass id="133">
+  <!-- Multi Channel Association Groups -->
+  <CommandClass id="142">
+    <Compatibility>
+      <ForceInstances>false</ForceInstances>
+    </Compatibility>
     <Associations num_groups="3">
       <Group index="1" label="Lifeline" max_associations="1"/>
       <Group index="2" label="Switch State 1" max_associations="10"/>
       <Group index="3" label="Switch State 2" max_associations="10"/>
     </Associations>
+  </CommandClass>
+  <!-- Map endpoints to instances -->
+  <CommandClass id="96">
+    <Compatibility>
+      <MapRootToEndpoint>true</MapRootToEndpoint>
+    </Compatibility>
+    <Instance index="1" label="i1" />
+    <Instance index="2" label="i2" />
   </CommandClass>
 </Product>
